@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=syncfusion.SfCalendar.XForms"
+             xmlns:local="clr-namespace:CalendarXamarin"
+             x:Class="CalendarXamarin.CalendarPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <syncfusion:SfCalendar x:Name="calendar" Margin="{OnPlatform iOS='0,40,0,0'}"/>
+    </ContentPage.Content>
+    <ContentPage.Behaviors>
+        <local:CalendarBehavior/>
+    </ContentPage.Behaviors>
+</ContentPage>
